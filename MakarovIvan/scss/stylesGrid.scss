@@ -1,0 +1,66 @@
+@import 'mixin.scss';
+@import 'const.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,700&display=swap&subset=latin-ext');
+* {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.mainConditionsPic {
+    @include gridElement (mainConditionsPic);
+    background-image: url(#{$pictures}Layer_6.jpg);
+}
+
+.mainCondition {
+    @include gridElement (mainCondition);
+    background-color: $mainConditionBG;
+    font-size: $mainConditionFS;
+    color:$text1;
+    line-height: 94px;
+}
+
+.mainInfo {
+    @include gridElement (mainInfo);
+    background-color: $mainInfoBG;
+    font-size: $mainInfoFS;
+    color:$text1;
+    line-height: 104px;
+}
+
+.mainDegree {
+    @include gridElement (mainDegree);
+    background-color: $blancBG;
+    font-size: $mainDegreeFS;
+    color:$text2;
+    line-height: 240px;
+}
+
+.infoHistory {
+    @include gridElement (infoHistory);
+    background-image: src='#';
+}
+
+.broadcast {
+    @include gridElement (broadcast);
+    background-color: $blancBG;
+    font-size: $broadcastFS;
+    display: flex;
+    justify-content: space-between;
+    color:$text2;
+}
+
+.container {
+    @include gridWrap (438, 581);
+    grid-template-columns: 290px 291px;
+    grid-template-rows: 144px 96px 94px 104px;
+    grid-template-areas: 
+        'mainConditionsPic  mainDegree'
+        'mainConditionsPic  infoHistory'
+        'mainCondition      broadcast'
+        'mainInfo           broadcast';
+}
+
+.broadcasts {
+    @include broadcasts;
+}

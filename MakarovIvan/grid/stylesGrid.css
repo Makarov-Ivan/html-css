@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,700&display=swap&subset=latin-ext");
+* {
+  font-family: 'Dosis', sans-serif;
+  text-align: center; }
+
+.mainConditionsPic {
+  grid-area: mainConditionsPic;
+  background-image: url(../pics/Layer_6.jpg); }
+
+.mainCondition {
+  grid-area: mainCondition;
+  background-color: rgba(119, 25, 33, 0.89);
+  font-size: 36px;
+  color: #ffffff;
+  line-height: 94px; }
+
+.mainInfo {
+  grid-area: mainInfo;
+  background-color: rgba(46, 28, 37, 0.98);
+  font-size: 23px;
+  color: #ffffff;
+  line-height: 104px; }
+
+.mainDegree {
+  grid-area: mainDegree;
+  background-color: white;
+  font-size: 78px;
+  color: #832d34;
+  line-height: 240px; }
+
+.infoHistory {
+  grid-area: infoHistory;
+  background-image: src= "#"; }
+
+.broadcast {
+  grid-area: broadcast;
+  background-color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: #832d34; }
+
+.container {
+  display: grid;
+  height: 438;
+  width: 581;
+  grid-template-columns: 290px 291px;
+  grid-template-rows: 144px 96px 94px 104px;
+  grid-template-areas: 'mainConditionsPic  mainDegree' 'mainConditionsPic  infoHistory' 'mainCondition      broadcast' 'mainInfo           broadcast'; }
+
+.broadcasts {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  width: 50px; }

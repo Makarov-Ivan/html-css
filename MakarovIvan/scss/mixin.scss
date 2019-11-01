@@ -1,0 +1,15 @@
+//GRID
+@mixin gridWrap ($h, $w) {
+    display: grid;
+    height: $h;
+    width: $w;
+}
+@mixin gridElement ($gridArea) {
+    grid-area: $gridArea;
+}
+@mixin broadcasts {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    width: 50px;
+}
