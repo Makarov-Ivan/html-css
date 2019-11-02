@@ -1,0 +1,75 @@
+@import 'mixin.scss';
+@import 'const.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,700&display=swap&subset=latin-ext');
+* {
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+}
+
+.widgetWrap {
+    @include gridWrap (438,581);
+    grid-template-columns: 290px 291px;
+    grid-template-rows: 144px 96px 198px;
+    grid-template-areas:
+    'left degree'
+    'left graph'
+    'left broadcast';
+}
+.widgetLeftSide {
+    @include gridWrap (438,290);
+    @include gridElement (left);
+    background-image: url(#{$pictures}Layer_6.jpg);
+    grid-template-columns: 290px;
+    grid-template-rows: 240px 94px 104px;
+    grid-template-areas:
+        'icon'
+        'wheather'
+        'cond';
+}
+.mainIcon {
+    @include gridElement (icon);
+    position: relative;
+    &__picture {
+        @include centerer;
+    }
+}
+.wheather {
+    @include gridElement (wheather);
+    background: $mainInfoBG;
+    position: relative;
+    &__text{
+        @include text ($mainConditionLH, $text1, $mainConditionFS);
+        @include centerer;
+    }
+}
+.condition {
+    @include gridElement (cond);
+    background: $mainConditionBG;
+    position: relative;
+    &__text{
+        @include text ($conditionLH, $text1, $mainInfoFS);
+        @include centerer;
+    }
+}
+.degree {
+    @include gridElement (degree);
+    background: $mainConditionBG;
+    position: relative;
+    &__text {
+        @include text ($mainDegreeLH, $text2, $mainDegreeFS);
+        @include centerer;
+    }
+}
+.history {
+    @include gridElement (graph);
+    position: relative;
+    &__picture {
+        @include centerer;
+    }
+}
+.broadcast {
+    position: relative;
+    @include gridElement (broadcast);
+    background: green;
+}

@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,700&display=swap&subset=latin-ext");
+* {
+  font-family: 'Dosis', sans-serif;
+  text-align: center; }
+
+.widgetWrap {
+  display: grid;
+  height: 438;
+  width: 581;
+  grid-template-columns: 290px 291px;
+  grid-template-rows: 144px 96px 198px;
+  grid-template-areas: 'left degree' 'left graph' 'left broadcast'; }
+
+.widgetLeftSide {
+  display: grid;
+  height: 438;
+  width: 290;
+  grid-area: left;
+  background-image: url(../pics/Layer_6.jpg);
+  grid-template-columns: 290px;
+  grid-template-rows: 240px 94px 104px;
+  grid-template-areas: 'icon' 'wheather' 'cond'; }
+
+.mainIcon {
+  grid-area: icon;
+  position: relative; }
+  .mainIcon__picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.wheather {
+  grid-area: wheather;
+  background: rgba(46, 28, 37, 0.98);
+  position: relative; }
+  .wheather__text {
+    line-height: 94px;
+    font-size: 36px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.condition {
+  grid-area: cond;
+  background: rgba(119, 25, 33, 0.89);
+  position: relative; }
+  .condition__text {
+    line-height: 104px;
+    font-size: 23px;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.degree {
+  grid-area: degree;
+  background: rgba(119, 25, 33, 0.89);
+  position: relative; }
+  .degree__text {
+    line-height: 144px;
+    font-size: 78px;
+    color: #832d34;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.history {
+  grid-area: graph;
+  position: relative; }
+  .history__picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.broadcast {
+  position: relative;
+  grid-area: broadcast;
+  background: green; }

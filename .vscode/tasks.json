@@ -6,7 +6,7 @@
         {
             "label": "Sass Compile Grid",
             "type": "shell",
-            "command": "node-sass ./MakarovIvan/scss/stylesGrid.scss ./MakarovIvan/grid/stylesGrid.css",
+            "command": "node-sass ./MakarovIvan/scss/stylesGrid_new.scss ./MakarovIvan/grid/stylesGrid_new.css",
             "group": "build",
             "problemMatcher": [
                 "$node-sass"
